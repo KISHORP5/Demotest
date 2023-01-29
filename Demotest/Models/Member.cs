@@ -38,8 +38,8 @@ namespace Demotest.Models
         public int StateId { get; set; }
         [Required]
         public int CityId { get; set; }
-        public string state { get; set; }
-        public string city { get; set; }
+        public string State { get; set; }
+        public string City { get; set; }
         public bool Agree { get; set; }
     }
 }
