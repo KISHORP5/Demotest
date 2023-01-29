@@ -85,53 +85,53 @@
 
 
 <div class=" modal fade" id="membermodal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">Member Add</h2>
-                </div>
-                <div class="modal-body">
-                    <form method="post">
-                        <div class="form-group">
-                            <lable>Name</lable>
-                            <input type="text" placeholder="Enter Name" class="form-control" id="name" />
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Member Add</h2>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="form-group">
+                        <lable>Name</lable>
+                        <input type="text" placeholder="Enter Name" class="form-control" id="name" />
 
-                            <lable>Email</lable>
-                            <input type="text" placeholder="Enter Email" class="form-control" id="email" />
+                        <lable>Email</lable>
+                        <input type="text" placeholder="Enter Email" class="form-control" id="email" />
 
-                            <lable>PhoneNo</lable>
-                            <input type="text" placeholder="Enter PhoneNo" class="form-control" id="phoneno" />
+                        <lable>PhoneNo</lable>
+                        <input type="text" placeholder="Enter PhoneNo" class="form-control" id="phoneno" />
 
-                            <lable>Address</lable>
-                            <input type="text" placeholder="Enter Address" class="form-control" id="address" />
+                        <lable>Address</lable>
+                        <input type="text" placeholder="Enter Address" class="form-control" id="address" />
 
-                            <lable>StateId</lable>
-                            <select name="products" class="form-control" asp-items="@ViewBag.StateList",--select--></select>
-                            <input type="text" class="form-control" id="name" />
-
-
-                            <lable>CityId</lable>
-                            <input type="text" class="form-control" id="name" />
+                        <lable>StateId</lable>
+                        <select name="products" class="form-control" asp-items="@ViewBag.StateList" ,--select--></select>
+                        <input type="text" class="form-control" id="name" />
 
 
-                            <lable>Agree</lable>
-                            <input type="checkbox" id="Ischeck" />
+                        <lable>CityId</lable>
+                        <input type="text" class="form-control" id="name" />
 
 
-                        </div>
-                    </form>
+                        <lable>Agree</lable>
+                        <input type="checkbox" id="Ischeck" />
 
-                    <div class="modal-footer">
-                        <div class="btn-group">
-                            <a href="#" id="#btnsave" class="btn btn-primary">Add new Member</a>
-                            <input type="button" value="Cancel" class="btn btn-danger " onclick="location.href='@Url.Action("Index","Member")';" />
-                        </div>
+
                     </div>
+                </form>
 
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <a href="#" id="#btnsave" class="btn btn-primary">Add new Member</a>
+                        <input type="button" value="Cancel" class="btn btn-danger " onclick="location.href='@Url.Action("Index","Member")';" />
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
+</div>
 
 
 
