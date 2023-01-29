@@ -134,16 +134,18 @@
     $("#addmember").click(function () {
         $("#membermodal").modal('show');
     })
-
+   
     function addmembers() {
+       
+      
         var dtaobj = {
-            Name: $("#name").val(),
-            Email: $("#email").val(),
-            PhoneNo: $("#phoneno").val(),
-            Address: $("#address").val(),
-            State: $("#statedropdown").val(),
-            City: $("#citydropdown").val(),
-            Agree: $("#Ischeck").val()
+            name: $("#name").val(),
+            email: $("#email").val(),
+            phoneno: $("#phoneno").val(),
+            address: $("#address").val(),
+            statedropdown: $("#statedropdown").val(),
+            citydropdown: $("#citydropdown").val(),
+            Ischeck: $("#Ischeck").val()
         }
         $.ajax({
             url: '/Member/Create',
@@ -151,9 +153,9 @@
             data: dtaobj,
             contentType: 'application/json;charset=utf-8',
             dataType: 'json',
-            success: function (res){
-               
-                alert("sucess");
+            success: function (){
+            
+                window.location.href = "/Member/Index";
                 $("#membermodal").modal('hide');
             },
             error: function () {
@@ -207,7 +209,7 @@
     });
 
     $(document).ready(function () {
-        debugger
+     
         $("#statedropdown").change(function () {
             $.get("/Member/GetCityList", { StateId: $("#statedropdown").val() }, function (data) {
                 $("#CityId").empty();
