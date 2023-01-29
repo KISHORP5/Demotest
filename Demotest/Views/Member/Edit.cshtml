@@ -104,10 +104,12 @@
                 debugger
                 $("#StateId").change(function () {
                     $.get("/Member/GetCityList", { StateId: $("#StateId").val() }, function (data) {
-                        $("#CityId").empty();
-                        $.each(data, function (index, row) {
-                            $("#CityId").append("<option value='" + row.Id + "'>" + row.CityName + "</option>")
-                        });
+                        if (data != null && !jQuery.isEmptyObject(data)) {
+                            $("#CityId").empty();
+                            $.each(data, function (index, row) {
+                                $("#CityId").append("<option value='" + row.Id + "'>" + row.CityName + "</option>")
+                            });
+                        }
                     });
                 })
                 $(function () {
