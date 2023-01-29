@@ -83,7 +83,12 @@ namespace Demotest.Models
         {
             List<State> statelist = db.States.ToList();
             ViewBag.StateList = new SelectList(statelist, "Id", "StateName");
+          
             var data = db.Members.Where(x => x.Id == id).FirstOrDefault();
+            List<City> citylist = db.Cities.ToList();
+            ViewBag.CityList = new SelectList(citylist, "Id", "CityName");
+
+           
             return View(data);
         }
 
